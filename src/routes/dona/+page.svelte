@@ -265,7 +265,7 @@
 						Aiutaci a diffondere la nostra missione condividendo i nostri progetti sui social media.
 					</p>
 					<a
-						href="javascript:void(0)"
+						href="{base}/#"
 						class="btn btn-primary"
 						on:click|preventDefault={toggleSharePopup}>Condividi</a
 					>
@@ -359,57 +359,6 @@
 		}
 	}
 
-	.gofundme-card {
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-		h3 {
-			margin-bottom: 1.5rem;
-			text-align: center;
-			color: #333;
-		}
-
-		p {
-			text-align: center;
-			margin-bottom: 1.5rem;
-		}
-	}
-
-	.gofundme-container {
-		margin-bottom: 1.5rem;
-		min-height: 400px;
-	}
-
-	.share-campaign {
-		border-top: 1px solid #eee;
-		padding-top: 1.5rem;
-		text-align: center;
-
-		p {
-			margin-bottom: 1rem;
-			font-size: 0.95rem;
-			color: #666;
-		}
-
-		.btn {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.share-icon {
-			margin-right: 0.5rem;
-		}
-	}
-
-	.projects-wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
 	.project-card {
 		position: relative;
 		background-color: white;
@@ -430,66 +379,11 @@
 			&.active {
 				background-color: #4caf50;
 				color: white;
-			}
-
-			&.completed {
-				background-color: #2196f3;
-				color: white;
-			}
-		}
-
-		h3 {
-			margin-bottom: 1rem;
-			font-size: 1.3rem;
-			padding-right: 6rem;
-		}
-
-		p {
-			margin-bottom: 1.5rem;
-			color: #666;
-		}
-
-		.project-progress {
-			margin-bottom: 1.5rem;
-
-			.progress-bar {
-				height: 10px;
-				background-color: #eee;
-				border-radius: 5px;
-				margin-bottom: 0.5rem;
-				overflow: hidden;
-
-				.progress {
-					height: 100%;
-					background: linear-gradient(90deg, #f39c12, #e74c3c);
-					border-radius: 5px;
-				}
-			}
-
-			.progress-stats {
-				display: flex;
-				justify-content: space-between;
-				font-size: 0.9rem;
-
-				.raised {
-					font-weight: 600;
-					color: #e74c3c;
-				}
-
-				.goal {
-					color: #777;
-				}
-			}
-		}
-
-		.btn {
-			width: 100%;
+			}	
 		}
 	}
 
-	.bg-light {
-		background-color: #f8f9fa;
-	}
+	
 
 	.support-card {
 		text-align: center;

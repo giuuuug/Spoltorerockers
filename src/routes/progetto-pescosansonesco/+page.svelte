@@ -237,9 +237,10 @@
 					<p>
 						Aiutaci a far conoscere il progetto condividendo le informazioni sui social media e
 						parlando con altri appassionati.
-					</p>					<a href="javascript:void(0)" class="btn btn-primary" on:click|preventDefault={toggleSharePopup}
-						>Condividi</a
-					>
+					</p>
+					<!-- svelte-ignore a11y_invalid_attribute -->
+					<a href="" class="btn btn-primary" on:click|preventDefault={toggleSharePopup}>
+						Condividi</a>
 				</div>
 			</div>
 		</div>
@@ -247,9 +248,9 @@
 </section>
 
 {#if showSharePopup}
-	<SharePopup 
+	<SharePopup
 		showPopup={showSharePopup}
-		pageUrl={pageUrl}
+		{pageUrl}
 		onClose={toggleSharePopup}
 		onCopy={copyToClipboard}
 		onShare={shareOnSocial}
@@ -257,40 +258,42 @@
 {/if}
 
 <style lang="scss">
-	@use "sass:color";
-	
-	  .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('/img/Pescosansonesco.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    
-    &.fade-in {
-      opacity: 1;
-    }
-    
-    .hero-content {
-      max-width: 800px;
-      padding: 0 2rem;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .hero-subtitle {
-      font-size: 1.5rem;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }  }
+	@use 'sass:color';
+
+	.hero {
+		height: 70vh;
+		background:
+			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url('/img/Pescosansonesco.jpg') center/cover no-repeat;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: white;
+		margin-bottom: 3rem;
+		opacity: 0;
+		transition: opacity 0.8s ease;
+
+		&.fade-in {
+			opacity: 1;
+		}
+
+		.hero-content {
+			max-width: 800px;
+			padding: 0 2rem;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+
+		.hero-subtitle {
+			font-size: 1.5rem;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+		}
+	}
 
 	.img-fluid {
 		max-width: 100%;

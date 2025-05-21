@@ -170,9 +170,6 @@
     margin-bottom: 2rem;
     position: relative;
     
-    &.text-center {
-      text-align: center;
-    }
   }
   
   .row.justify-center {
@@ -200,17 +197,7 @@
       border-radius: 50%;
       overflow: hidden;
       
-      .avatar-placeholder {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #2c3e50, #3498db);
-        color: white;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    
       
       .avatar-image {
         width: 100%;
@@ -296,84 +283,6 @@
     
     .btn {
       align-self: flex-start;
-    }
-  }
-  
-  .testimonials {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    .testimonial {
-      background-color: white;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      
-      &:last-child {
-        margin-bottom: 0;
-      }
-      
-      .testimonial-quote {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin-bottom: 1.5rem;
-        color: #333;
-        
-        &::before {
-          content: '"';
-          font-size: 2.5rem;
-          color: #3498db;
-          line-height: 0;
-          vertical-align: -0.25em;
-        }
-      }
-      
-      .testimonial-author {
-        text-align: right;
-        color: #666;
-        font-weight: 600;
-      }
-    }
-  }
-  
-  .cta-section {
-    padding: 4rem 0;
-  }
-  
-  .cta-box {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
-    padding: 3rem;
-    border-radius: 8px;
-    text-align: center;
-    
-    h2 {
-      margin-bottom: 1rem;
-    }
-    
-    p {
-      margin-bottom: 1.5rem;
-      opacity: 0.9;
-      font-size: 1.1rem;
-    }
-    
-    .cta-actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .btn-outline {
-      background-color: transparent;
-      border: 2px solid white;
-      color: white;
-      
-      &:hover {
-        background-color: white;
-        color: #3498db;
-      }
     }
   }
 </style>

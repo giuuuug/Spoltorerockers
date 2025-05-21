@@ -180,11 +180,7 @@
       border-bottom: 1px solid rgba($light-sand, 0.1);
       margin-bottom: 1rem;
       
-      .nav-logo {
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
+      
       
       .close-menu {
         border: none;

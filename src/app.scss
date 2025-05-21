@@ -1,0 +1,332 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variabili */
+/* Palette principale */
+$dark: #232220;       /* Nero sfumato - colore più scuro per testo e sfondi */
+$gray-dark: #4e4c4f;  /* Grigio scuro - per elementi secondari */
+$mauve: #9f8d8d;      /* Malva - per accenti e transizioni */
+$sand: #d9ae8e;       /* Sabbia - per elementi in evidenza */
+$light-sand: #ffddba; /* Sabbia chiaro - per sfondi chiari e hover */
+
+/* Colori funzionali */
+$primary-color: $dark;
+$secondary-color: $sand;
+$accent-color: $mauve;
+$text-color: $dark;
+$light-text: $light-sand;
+$background-color: #f8f7f5; /* Leggermente più caldo del bianco puro */
+
+/* Gradienti */
+$mountain-gradient: linear-gradient(135deg, $gray-dark, $dark);
+$sunset-gradient: linear-gradient(135deg, $sand, $mauve);
+$warm-gradient: linear-gradient(135deg, $light-sand, $sand);
+$neutral-gradient: linear-gradient(135deg, $mauve, $gray-dark);
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+  overflow-x: hidden;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $sand;
+  text-decoration: none;
+  transition: color 0.3s;
+  
+  
+  &:hover {
+    color: color.adjust($sand, $lightness: -15%);
+  }
+}
+
+/* Componenti comuni */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 1;
+  }
+  
+  &:hover::before {
+    width: 300%;
+    height: 300%;
+  }
+  
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  &-primary {
+    background: $mountain-gradient;
+    color: $light-sand;
+    
+    &:hover {
+      box-shadow: 0 4px 15px rgba($dark, 0.4);
+      transform: translateY(-3px);
+    }
+    
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba($dark, 0.3);
+    }
+  }
+  
+  &-secondary {
+    background: $sunset-gradient;
+    color: $dark;
+    
+    &:hover {
+      background: $warm-gradient;
+      box-shadow: 0 4px 15px rgba($sand, 0.4);
+      transform: translateY(-3px);
+    }
+    
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba($sand, 0.3);
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba($dark, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba($dark, 0.15);
+  }
+  
+  &-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $gray-dark;
+  }
+  
+  &-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+}
+
+.section {
+  padding: 3rem 0;
+  
+  &-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: $sunset-gradient;
+      margin: 0.5rem auto 0;
+    }
+  }
+}
+
+/* Utilità */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Griglia responsive */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  justify-content: center; /* Centra gli elementi orizzontalmente */
+}
+
+.col {
+  padding: 0 1rem;
+  flex: 1;
+  
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.col-6 {
+  padding: 0 1rem;
+  flex: 0 0 50%;
+  
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.col-4 {
+  padding: 0 1rem;
+  flex: 0 0 33.333333%;
+  
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Overlay per menu mobile */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($dark, 0.5);
+  z-index: 999;
+  
+  &.active {
+    display: block;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: $dark;
+  color: $light-sand;
+  box-shadow: 0 2px 10px rgba($dark, 0.2);
+}
+
+.sidebar {
+  background: $dark;
+  color: $light-sand;
+  width: 250px;
+  padding: 1rem 0;
+  box-shadow: 2px 0 10px rgba($dark, 0.1);
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}

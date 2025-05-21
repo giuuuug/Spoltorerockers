@@ -26,12 +26,11 @@
   });
 </script>
 
-<div class="app-container">
-  <header>
-    <div class="logo-container">
+<div class="app-container">  <header>
+    <a href="{base}/" class="logo-container">
       <img src="{base}/img/Logo.png" alt="Spoltorerockers Logo" class="logo" />
       <h1>Spoltorerockers</h1>
-    </div>
+    </a>
     <button class="menu-toggle" on:click={toggleMenu} aria-label="Toggle menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -88,8 +87,7 @@
     position: relative;
     overflow-x: hidden;
   }
-  
-  header {
+    header {
     position: fixed;
     top: 0;
     left: 0;
@@ -103,6 +101,8 @@
     .logo-container {
       display: flex;
       align-items: center;
+      text-decoration: none;
+      cursor: pointer;
       
       .logo {
         height: 40px;

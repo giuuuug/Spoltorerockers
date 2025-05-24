@@ -67,6 +67,7 @@
 	</div>
 </div>
 
+
 <section class="section">
 	<div class="container">
 		<div class="row">
@@ -145,14 +146,14 @@
 					</p>
 				</div>
 			</div>
-			<div class="timeline-item">
+			<!-- <div class="timeline-item">
 				<div class="timeline-marker active"></div>
 				<div class="timeline-content">
 					<h3>Fase 3: Pulizia a fondo</h3>
-					<p class="timeline-date">Prevista - Prevista fino a Luglio 2024</p>
+					<p class="timeline-date">Prevista - Prevista </p>
 					<p>Pulizia a fondo del sentiero, raccolta rifiuti e rimozione rami.</p>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
@@ -281,17 +282,35 @@
 		.hero-content {
 			max-width: 800px;
 			padding: 0 2rem;
+			width: 100%;
 		}
 
 		h1 {
 			font-size: 3rem;
 			margin-bottom: 1rem;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			word-wrap: break-word;
+
+			@media (max-width: 768px) {
+				font-size: 2.2rem;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 1.7rem;
+			}
 		}
 
 		.hero-subtitle {
 			font-size: 1.5rem;
 			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+			@media (max-width: 768px) {
+				font-size: 1.2rem;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 1rem;
+			}
 		}
 	}
 

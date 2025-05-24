@@ -277,10 +277,10 @@ a {
 .col-4 {
   padding: 0 1rem;
   flex: 0 0 33.333333%;
+  margin-bottom: 1.5rem;
   
   @media (max-width: 768px) {
     flex: 0 0 100%;
-    margin-bottom: 1.5rem;
   }
 }
 

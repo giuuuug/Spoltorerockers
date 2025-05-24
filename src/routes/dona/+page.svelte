@@ -308,17 +308,35 @@
 		.hero-content {
 			max-width: 800px;
 			padding: 0 2rem;
+			width: 100%;
 		}
 
 		h1 {
 			font-size: 3rem;
 			margin-bottom: 1rem;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			word-wrap: break-word;
+
+			@media (max-width: 768px) {
+				font-size: 2.2rem;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 1.9rem;
+			}
 		}
 
 		.hero-subtitle {
 			font-size: 1.5rem;
 			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+			@media (max-width: 768px) {
+				font-size: 1.2rem;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 1rem;
+			}
 		}
 	}
 

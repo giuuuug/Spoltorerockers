@@ -176,7 +176,7 @@
 					<p class="team-role">Fondatore</p>
 					<p>
 						Mi piace vivere ogni giorno in modo nuovo. Amo arrampicare, osservare e capire la
-						natura. ù Lo sport è parte integrante della mia vita, così come l'alimentazione e uno
+						natura. Lo sport è parte integrante della mia vita, così come l'alimentazione e uno
 						stile di vita sano.
 					</p>
 					<div class="social-icons">
